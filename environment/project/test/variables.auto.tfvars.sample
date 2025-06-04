@@ -1,0 +1,39 @@
+aws_region  = "ap-northeast-3"
+aws_profile = "cloud-foundation"
+
+
+name     = "test"
+vpc_cidr = "10.10.0.0/16"
+
+create_internet_gateway = true
+create_nat_gateway      = true
+nat_gateway_strategy = "single"
+enable_flow_logs        = true
+flow_log_role_arn       = "" # leave empty if flow logs are disabled
+
+
+public_subnets = {
+  pub1 = {
+    cidr = "10.10.1.0/24"
+    az   = "ap-northeast-3a"
+    name = "public-a"
+  }
+  pub2 = {
+    cidr = "10.10.2.0/24"
+    az   = "ap-northeast-3b"
+    name = "public-b"
+  }
+}
+
+private_subnets = {
+  priv1 = {
+    cidr = "10.10.101.0/24"
+    az   = "ap-northeast-3a"
+    name = "private-a"
+  }
+  priv2 = {
+    cidr = "10.10.102.0/24"
+    az   = "ap-northeast-3b"
+    name = "private-b"
+  }
+}

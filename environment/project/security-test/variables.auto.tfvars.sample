@@ -1,0 +1,9 @@
+aws_region  = "ap-northeast-3"
+aws_profile = "cloud-foundation"
+
+name = "customer-xyz-security"
+
+tags = {
+  Environment = "dev"
+  Team        = "CloudFoundation"
+}
